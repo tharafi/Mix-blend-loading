@@ -1,0 +1,96 @@
+/* * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "cairo", sans-serif;
+    background-color: black;
+}
+div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+div span {
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 1;
+    mix-blend-mode: difference;
+}
+div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    animation: move 4s linear infinite;
+}
+@keyframes move {
+    0%, 100% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 100px);
+    }
+    0% {
+
+    }
+} */
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: black;
+    font-family: "cairo", sans-serif;
+}
+div {
+    /* height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+div span {
+    font-size: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1;
+    position: relative;
+}
+span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 50px;
+    height: 80%;
+    background-color: white;
+    transition: .3s;
+    animation: move 4s linear infinite;
+}
+
+@keyframes move {
+    0%, 100%{
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 50px);
+    }
+
+}
